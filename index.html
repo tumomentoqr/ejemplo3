@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestra Historia de Amor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: rgba(255, 203, 203, 0.337);
+        color: #333;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px;
+        animation: fadeIn 1.5s ease;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: #ff1a1a;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .heart-divider {
+        font-size: 2rem;
+        color: #ff4b4b;
+        margin: 20px 0;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #ff6b6b;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        border-radius: 10px;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        animation: fadeIn 1s ease;
+      }
+
+      .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        border: 4px solid #ff1a1a;
+        border-radius: 50%;
+        top: 20px;
+        right: -13px;
+        z-index: 1;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+
+      .timeline-item:nth-child(even)::after {
+        left: -12px;
+      }
+
+      .timeline-content {
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .timeline-content:hover {
+        transform: translateY(-5px);
+      }
+
+      .timeline-content::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, #ff1a1a, #ff8e8e);
+      }
+
+      .timeline-date {
+        font-weight: bold;
+        color: #ff1a1a;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+      }
+
+      .timeline-title {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .timeline-desc {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .timeline-img {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .timeline-img:hover {
+        transform: scale(1.03);
+      }
+
+      .photo-placeholder {
+        background-color: #ffecec;
+        height: 200px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff6b6b;
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        color: #666;
+      }
+
+      .final-message {
+        background: linear-gradient(135deg, #ff1a1a 0%, #ff6b6b 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-top: 40px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .timeline::after {
+          left: 31px;
+        }
+
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        .timeline-item:nth-child(even) {
+          left: 0;
+        }
+
+        .timeline-item::after {
+          left: 18px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+          left: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Nuestra Historia de Amor</h1>
+        <p class="subtitle">Cada momento a tu lado es especial</p>
+        <div class="heart-divider">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-heart"></i>
+        </div>
+      </header>
+
+      <div class="timeline">
+        <!-- Primer momento -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">14 de Febrero, 2023</div>
+            <h3 class="timeline-title">Nuestra Primera Cita</h3>
+            <p class="timeline-desc">
+              Ese día en la cafetería, no sabía que mi vida estaba a punto de
+              cambiar para siempre.
+            </p>
+
+            <img
+              src="1.jpg"
+              alt="Nuestra primera foto juntos"
+              class="timeline-img"
+            />
+          </div>
+        </div>
+
+        <!-- Segundo momento -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">20 de Marzo, 2023</div>
+            <h3 class="timeline-title">Nuestra Primera Fiesta</h3>
+            <p class="timeline-desc"></p>
+
+            <img
+              src="2.jpg"
+              alt="Nuestra primera foto juntos"
+              class="timeline-img"
+            />
+          </div>
+        </div>
+
+        <!-- Tercer momento -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">15 de Mayo, 2023</div>
+            <h3 class="timeline-title">Nuestro Primer Viaje</h3>
+            <p class="timeline-desc"></p>
+
+            <img
+              src="3.jpg"
+              alt="Nuestra primera foto juntos"
+              class="timeline-img"
+            />
+          </div>
+        </div>
+
+        <!-- Cuarto momento -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">12 de Julio, 2023</div>
+            <h3 class="timeline-title">Celebrando Juntos</h3>
+            <p class="timeline-desc">Tu primer cumpleaños.</p>
+
+            <img
+              src="4.jpg"
+              alt="Nuestra primera foto juntos"
+              class="timeline-img"
+            />
+          </div>
+        </div>
+
+        <!-- Quinto momento -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">24 de Diciembre, 2023</div>
+            <h3 class="timeline-title">Nuestra primera navidad juntos</h3>
+            <p class="timeline-desc"></p>
+
+            <img
+              src="5.jpg"
+              alt="Nuestra primera foto juntos"
+              class="timeline-img"
+            />
+          </div>
+        </div>
+
+        <!-- Sexto momento -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">14 de Febrero, 2024</div>
+            <h3 class="timeline-title">Nuestro Aniversario</h3>
+            <p class="timeline-desc">Dos años juntos.</p>
+
+            <img
+              src="6.jpg"
+              alt="Nuestra primera foto juntos"
+              class="timeline-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="final-message">
+        <h2>Y esto es solo el comienzo...</h2>
+        <p>
+          Mi amor, cada día a tu lado es una nueva página en nuestra historia.
+          No puedo esperar para seguir llenando esta línea de tiempo con muchos
+          momentos más a tu lado. Te amo con todo mi corazón.
+        </p>
+      </div>
+
+      <footer>
+        <p>Creado con ❤️ para la persona más especial de mi vida</p>
+      </footer>
+    </div>
+
+    <script>
+      // Efecto de aparición gradual para los elementos de la línea de tiempo
+      document.addEventListener('DOMContentLoaded', function () {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        timelineItems.forEach((item, index) => {
+          // Aplicar un retraso gradual para la animación
+          item.style.animationDelay = index * 0.3 + 's';
+        });
+      });
+    </script>
+  </body>
+</html>
