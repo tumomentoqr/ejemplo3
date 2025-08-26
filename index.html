@@ -20,110 +20,99 @@
         background: rgba(255, 203, 203, 0.337);
         color: #333;
         min-height: 100vh;
-        padding: 20px;
+        padding: 15px;
       }
 
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 15px;
       }
 
       header {
         text-align: center;
-        margin-bottom: 40px;
-        padding: 20px;
+        margin-bottom: 30px;
+        padding: 15px;
         animation: fadeIn 1.5s ease;
       }
 
       h1 {
-        font-size: 3rem;
+        font-size: 2.2rem;
         color: #ff1a1a;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 8px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       }
 
       .subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #666;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       .heart-divider {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #ff4b4b;
-        margin: 20px 0;
+        margin: 15px 0;
       }
 
       .timeline {
         position: relative;
         max-width: 1000px;
         margin: 0 auto;
+        padding: 20px 0;
       }
 
       .timeline::after {
         content: '';
         position: absolute;
-        width: 6px;
+        width: 4px;
         background-color: #ff6b6b;
         top: 0;
         bottom: 0;
-        left: 50%;
-        margin-left: -3px;
+        left: 20px;
         border-radius: 10px;
       }
 
       .timeline-item {
-        padding: 10px 40px;
+        padding: 15px 15px 15px 50px;
         position: relative;
-        width: 50%;
+        width: 100%;
         animation: fadeIn 1s ease;
+        margin-bottom: 20px;
       }
 
       .timeline-item::after {
         content: '';
         position: absolute;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         background-color: white;
-        border: 4px solid #ff1a1a;
+        border: 3px solid #ff1a1a;
         border-radius: 50%;
         top: 20px;
-        right: -13px;
+        left: 11px;
         z-index: 1;
-      }
-
-      .timeline-item:nth-child(even) {
-        left: 50%;
-      }
-
-      .timeline-item:nth-child(odd) {
-        left: 0;
-      }
-
-      .timeline-item:nth-child(even)::after {
-        left: -12px;
       }
 
       .timeline-content {
         padding: 20px;
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
         position: relative;
         overflow: hidden;
       }
 
       .timeline-content:hover {
-        transform: translateY(-5px);
+        transform: translateY(-3px);
       }
 
       .timeline-content::before {
         content: '';
         position: absolute;
         width: 100%;
-        height: 5px;
+        height: 4px;
         top: 0;
         left: 0;
         background: linear-gradient(to right, #ff1a1a, #ff8e8e);
@@ -132,59 +121,74 @@
       .timeline-date {
         font-weight: bold;
         color: #ff1a1a;
-        margin-bottom: 10px;
-        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
       }
 
       .timeline-title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-bottom: 10px;
         color: #333;
       }
 
       .timeline-desc {
-        margin-bottom: 15px;
-        line-height: 1.6;
+        margin-bottom: 12px;
+        line-height: 1.5;
+        font-size: 0.95rem;
       }
 
       .timeline-img {
         width: 100%;
+        height: 180px;
+        object-fit: cover;
         border-radius: 8px;
         margin-top: 10px;
         transition: transform 0.3s ease;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       }
 
       .timeline-img:hover {
-        transform: scale(1.03);
+        transform: scale(1.02);
       }
 
       .photo-placeholder {
         background-color: #ffecec;
-        height: 200px;
+        height: 180px;
         border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #ff6b6b;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-top: 10px;
       }
 
       footer {
         text-align: center;
-        margin-top: 50px;
-        padding: 20px;
+        margin-top: 40px;
+        padding: 15px;
         color: #666;
+        font-size: 0.9rem;
       }
 
       .final-message {
         background: linear-gradient(135deg, #ff1a1a 0%, #ff6b6b 100%);
         color: white;
-        padding: 30px;
+        padding: 25px;
         border-radius: 10px;
-        margin-top: 40px;
+        margin-top: 30px;
         text-align: center;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .final-message h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      .final-message p {
+        font-size: 0.95rem;
+        line-height: 1.5;
       }
 
       @keyframes fadeIn {
@@ -198,28 +202,69 @@
         }
       }
 
-      @media screen and (max-width: 768px) {
+      /* Estilos para tablets */
+      @media screen and (min-width: 600px) {
         .timeline::after {
-          left: 31px;
+          left: 50%;
+          margin-left: -2px;
         }
 
         .timeline-item {
-          width: 100%;
-          padding-left: 70px;
-          padding-right: 25px;
+          width: 50%;
+          padding: 15px 40px 15px 15px;
         }
 
         .timeline-item:nth-child(even) {
-          left: 0;
+          left: 50%;
+          padding: 15px 15px 15px 40px;
         }
 
         .timeline-item::after {
-          left: 18px;
+          left: auto;
+          right: -10px;
         }
 
         .timeline-item:nth-child(even)::after {
-          left: 18px;
+          left: -10px;
+          right: auto;
         }
+      }
+
+      /* Estilos para escritorio */
+      @media screen and (min-width: 900px) {
+        h1 {
+          font-size: 2.8rem;
+        }
+
+        .subtitle {
+          font-size: 1.1rem;
+        }
+
+        .timeline-img {
+          height: 200px;
+        }
+
+        .photo-placeholder {
+          height: 200px;
+        }
+      }
+
+      /* Mejoras para la visualización de imágenes */
+      .image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+
+      /* Efecto de carga para imágenes */
+      .timeline-img {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .timeline-img.loaded {
+        opacity: 1;
       }
     </style>
   </head>
@@ -245,11 +290,11 @@
               Ese día en la cafetería, no sabía que mi vida estaba a punto de
               cambiar para siempre.
             </p>
-
             <img
               src="1.jpg"
               alt="Nuestra primera foto juntos"
               class="timeline-img"
+              onload="this.classList.add('loaded')"
             />
           </div>
         </div>
@@ -259,12 +304,14 @@
           <div class="timeline-content">
             <div class="timeline-date">20 de Marzo, 2023</div>
             <h3 class="timeline-title">Nuestra Primera Fiesta</h3>
-            <p class="timeline-desc"></p>
-
+            <p class="timeline-desc">
+              La primera vez que bailamos juntos bajo las estrellas.
+            </p>
             <img
               src="2.jpg"
-              alt="Nuestra primera foto juntos"
+              alt="Nuestra primera fiesta juntos"
               class="timeline-img"
+              onload="this.classList.add('loaded')"
             />
           </div>
         </div>
@@ -274,12 +321,12 @@
           <div class="timeline-content">
             <div class="timeline-date">15 de Mayo, 2023</div>
             <h3 class="timeline-title">Nuestro Primer Viaje</h3>
-            <p class="timeline-desc"></p>
-
+            <p class="timeline-desc">Descubriendo nuevos lugares a tu lado.</p>
             <img
               src="3.jpg"
-              alt="Nuestra primera foto juntos"
+              alt="Nuestro primer viaje juntos"
               class="timeline-img"
+              onload="this.classList.add('loaded')"
             />
           </div>
         </div>
@@ -289,12 +336,14 @@
           <div class="timeline-content">
             <div class="timeline-date">12 de Julio, 2023</div>
             <h3 class="timeline-title">Celebrando Juntos</h3>
-            <p class="timeline-desc">Tu primer cumpleaños.</p>
-
+            <p class="timeline-desc">
+              Tu primer cumpleaños juntos, un día lleno de alegría.
+            </p>
             <img
               src="4.jpg"
-              alt="Nuestra primera foto juntos"
+              alt="Celebrando tu cumpleaños"
               class="timeline-img"
+              onload="this.classList.add('loaded')"
             />
           </div>
         </div>
@@ -304,12 +353,14 @@
           <div class="timeline-content">
             <div class="timeline-date">24 de Diciembre, 2023</div>
             <h3 class="timeline-title">Nuestra primera navidad juntos</h3>
-            <p class="timeline-desc"></p>
-
+            <p class="timeline-desc">
+              Una noche mágica llena de amor y alegría.
+            </p>
             <img
               src="5.jpg"
-              alt="Nuestra primera foto juntos"
+              alt="Nuestra primera navidad juntos"
               class="timeline-img"
+              onload="this.classList.add('loaded')"
             />
           </div>
         </div>
@@ -319,12 +370,12 @@
           <div class="timeline-content">
             <div class="timeline-date">14 de Febrero, 2024</div>
             <h3 class="timeline-title">Nuestro Aniversario</h3>
-            <p class="timeline-desc">Dos años juntos.</p>
-
+            <p class="timeline-desc">Dos años juntos y cada día te amo más.</p>
             <img
               src="6.jpg"
-              alt="Nuestra primera foto juntos"
+              alt="Nuestro aniversario"
               class="timeline-img"
+              onload="this.classList.add('loaded')"
             />
           </div>
         </div>
@@ -332,15 +383,10 @@
 
       <div class="final-message">
         <h2>Y esto es solo el comienzo...</h2>
-        <p>
-          Mi amor, cada día a tu lado es una nueva página en nuestra historia.
-          No puedo esperar para seguir llenando esta línea de tiempo con muchos
-          momentos más a tu lado. Te amo con todo mi corazón.
-        </p>
       </div>
 
       <footer>
-        <p>Creado con ❤️ para la persona más especial de mi vida</p>
+        <p>Creado con ❤️ para la persona más especial</p>
       </footer>
     </div>
 
@@ -351,7 +397,21 @@
 
         timelineItems.forEach((item, index) => {
           // Aplicar un retraso gradual para la animación
-          item.style.animationDelay = index * 0.3 + 's';
+          item.style.animationDelay = index * 0.2 + 's';
+        });
+
+        // Precarga de imágenes con manejo de errores
+        const images = document.querySelectorAll('.timeline-img');
+        images.forEach((img) => {
+          // Si la imagen no carga, mostrar un placeholder
+          img.onerror = function () {
+            this.style.display = 'none';
+            const placeholder = document.createElement('div');
+            placeholder.className = 'photo-placeholder';
+            placeholder.innerHTML =
+              '<i class="fas fa-heart"></i> Nuestro recuerdo';
+            this.parentNode.appendChild(placeholder);
+          };
         });
       });
     </script>
